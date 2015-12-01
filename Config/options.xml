@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Option>
+    <DefaultLogLocation>C:\tomcat\logs\catalina.out</DefaultLogLocation>
+    <AutoLoadLog>true</AutoLoadLog>
+    <AutoPause>true</AutoPause>
+    <QueryLogHandling>true</QueryLogHandling>
+    <LogRolloverCommand>ntloggerrollover logger</LogRolloverCommand>
+    <LogEditCommand>devenv {0}</LogEditCommand>
+    <FindInFilesCommand>c:\git</FindInFilesCommand>
+    <TailTimeout>1000</TailTimeout>
+    <MaxBytesToLoad>100000000</MaxBytesToLoad>
+    <BackgroundColor>Black</BackgroundColor>
+    <FilterColor>Yellow</FilterColor>
+    <DefaultColor>White</DefaultColor>
+    <BorderColor>WhiteSmoke</BorderColor>
+    <TimeFormat>MM/dd/yyyy HH:mm:ss</TimeFormat>
+  </Option>
+  <Window>
+    <Left>-4</Left>
+    <Width>1288</Width>
+    <Top>-4</Top>
+    <Height>998</Height>
+  </Window>
+  <HighlightItem>
+    <ContainsString>"DEBUG</ContainsString>
+    <HighlightColor>White</HighlightColor>
+  </HighlightItem>
+  <HighlightItem>
+    <ContainsString>"INFO</ContainsString>
+    <HighlightColor>Lime</HighlightColor>
+  </HighlightItem>
+  <HighlightItem>
+    <ContainsString>"WARN</ContainsString>
+    <HighlightColor>Coral</HighlightColor>
+  </HighlightItem>
+  <HighlightItem>
+    <ContainsString>"ERROR</ContainsString>
+    <HighlightColor>Orangered</HighlightColor>
+  </HighlightItem>
+  <HighlightItem>
+    <ContainsString>"FATAL</ContainsString>
+    <HighlightColor>Red</HighlightColor>
+  </HighlightItem>
+  <HighlightItem>
+    <ContainsString>***</ContainsString>
+    <HighlightColor>Red</HighlightColor>
+  </HighlightItem>
+</Options>
