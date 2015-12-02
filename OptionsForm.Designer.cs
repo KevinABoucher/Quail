@@ -45,7 +45,6 @@ namespace Quail
             this.tbTimeFormat = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbAutoPause = new System.Windows.Forms.CheckBox();
-            this.cbQueryLogHandling = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -174,7 +173,6 @@ namespace Quail
             this.tabPage1.Controls.Add(this.tbTimeFormat);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.cbAutoPause);
-            this.tabPage1.Controls.Add(this.cbQueryLogHandling);
             this.tabPage1.Controls.Add(this.tbLogEditCommand);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label7);
@@ -194,7 +192,7 @@ namespace Quail
             // 
             // tbTimeFormat
             // 
-            this.tbTimeFormat.Location = new System.Drawing.Point(130, 189);
+            this.tbTimeFormat.Location = new System.Drawing.Point(130, 166);
             this.tbTimeFormat.Name = "tbTimeFormat";
             this.tbTimeFormat.Size = new System.Drawing.Size(276, 20);
             this.tbTimeFormat.TabIndex = 26;
@@ -202,7 +200,7 @@ namespace Quail
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(59, 189);
+            this.label10.Location = new System.Drawing.Point(59, 166);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 27;
@@ -217,16 +215,6 @@ namespace Quail
             this.cbAutoPause.TabIndex = 23;
             this.cbAutoPause.Text = "Auto Pause";
             this.cbAutoPause.UseVisualStyleBackColor = true;
-            // 
-            // cbQueryLogHandling
-            // 
-            this.cbQueryLogHandling.AutoSize = true;
-            this.cbQueryLogHandling.Location = new System.Drawing.Point(130, 166);
-            this.cbQueryLogHandling.Name = "cbQueryLogHandling";
-            this.cbQueryLogHandling.Size = new System.Drawing.Size(120, 17);
-            this.cbQueryLogHandling.TabIndex = 22;
-            this.cbQueryLogHandling.Text = "Query Log Handling";
-            this.cbQueryLogHandling.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -358,7 +346,7 @@ namespace Quail
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.66474F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.33526F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 84);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -418,7 +406,6 @@ namespace Quail
     private System.Windows.Forms.Button btnLightTheme;
     private System.Windows.Forms.Button btnDarkTheme;
     public System.Windows.Forms.CheckBox cbAutoPause;
-    public System.Windows.Forms.CheckBox cbQueryLogHandling;
     private System.Windows.Forms.ColorDialog colorDialog1;
     private System.Windows.Forms.Button btnGetColor;
     private System.Windows.Forms.Button button2;

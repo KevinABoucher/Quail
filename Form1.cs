@@ -99,7 +99,6 @@ namespace Quail
     private ToolStripMenuItem mnuTrainShow;
     private bool mOpaque;
     private bool mPause;
-    private bool mQueryLogHandling = true;
     protected MruStripMenuInline mruMenu;
     private int mSearchLocation;
     private bool mShowSelected;
@@ -208,7 +207,6 @@ namespace Quail
         mDefaultLogLocation = mOptions.option.DefaultLogLocation;
         mAutoPause = mOptions.option.AutoPause;
         mLogEditCommand = mOptions.option.LogEditCommand;
-        mQueryLogHandling = mOptions.option.QueryLogHandling;
         mTailTimeout = mOptions.option.TailTimeout;
         mMaxBytesToLoad = mOptions.option.MaxBytesToLoad;
         dtTimeSliceStart.CustomFormat = mOptions.option.TimeFormat;
@@ -522,31 +520,6 @@ namespace Quail
             {
               if (!regFilter.IsMatch(line))
                 continue;
-            }
-
-            if (mQueryLogHandling)
-            {
-              // Ignore pop first message in QueryLog
-              if (mFileName.Contains("querylog"))
-              {
-                if (line.Contains("PopFirstMessage"))
-                  continue;
-
-                if (line.Contains("p_pipelineid"))
-                  continue;
-
-                if (line.Contains("p_systemtime"))
-                  continue;
-
-                if (line.Contains("value: <"))
-                  continue;
-
-                if (line.Contains("P stored procedure"))
-                  continue;
-
-                if (line.Contains("p_messageid"))
-                  continue;
-              }
             }
 
             ++i;
@@ -1433,7 +1406,6 @@ namespace Quail
       dlg.tbDefaultLogLocation.Text = mOptions.option.DefaultLogLocation;
       dlg.cbAutoLoadLog.Checked = mOptions.option.AutoLoadLog;
       dlg.cbAutoPause.Checked = mOptions.option.AutoPause;
-      dlg.cbQueryLogHandling.Checked = mOptions.option.QueryLogHandling;
       dlg.tbLogEditCommand.Text = mOptions.option.LogEditCommand;
       dlg.tbMaxBytesToLoad.Text = mOptions.option.MaxBytesToLoad.ToString();
       dlg.tbTailTimeout.Text = mOptions.option.TailTimeout.ToString();
@@ -1454,7 +1426,6 @@ namespace Quail
           mOptions.option.DefaultLogLocation = dlg.tbDefaultLogLocation.Text;
           mOptions.option.AutoLoadLog = dlg.cbAutoLoadLog.Checked;
           mOptions.option.AutoPause = dlg.cbAutoPause.Checked;
-          mOptions.option.QueryLogHandling = dlg.cbQueryLogHandling.Checked;
 
           mOptions.option.LogEditCommand = dlg.tbLogEditCommand.Text;
           mOptions.option.MaxBytesToLoad = long.Parse(dlg.tbMaxBytesToLoad.Text);
@@ -1487,7 +1458,6 @@ namespace Quail
           mLogEditCommand = mOptions.option.LogEditCommand;
 
           mAutoPause = mOptions.option.AutoPause;
-          mQueryLogHandling = mOptions.option.QueryLogHandling;
           mTailTimeout = mOptions.option.TailTimeout;
           mMaxBytesToLoad = mOptions.option.MaxBytesToLoad;
 

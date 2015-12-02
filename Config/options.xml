@@ -4,8 +4,6 @@
     <DefaultLogLocation>C:\tomcat\logs\catalina.out</DefaultLogLocation>
     <AutoLoadLog>true</AutoLoadLog>
     <AutoPause>true</AutoPause>
-    <QueryLogHandling>true</QueryLogHandling>
-    <LogRolloverCommand>ntloggerrollover logger</LogRolloverCommand>
     <LogEditCommand>devenv {0}</LogEditCommand>
     <FindInFilesCommand>c:\git</FindInFilesCommand>
     <TailTimeout>1000</TailTimeout>

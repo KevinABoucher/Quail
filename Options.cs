@@ -129,9 +129,6 @@ namespace Quail
         [XmlElement("AutoPause")]
         public bool AutoPause = true;
 
-        [XmlElement("QueryLogHandling")]
-        public bool QueryLogHandling = true;
-
         [XmlElement("LogEditCommand")]
         public string LogEditCommand = @"notepad.exe {0}";
 
